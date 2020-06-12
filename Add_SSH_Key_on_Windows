@@ -1,0 +1,17 @@
+https://syntaxbytetutorials.com/add-a-github-ssh-key-on-windows/
+
+Commands
+
+Step 1: Generate Your SSH Key
+
+$ ssh-keygen -t rsa -b 4096 -C "example@example.com"
+
+Step 2: Use the Key
+
+$ eval $(ssh-agent -s)
+
+$ ssh-add ~/.ssh/id_rsa
+
+Step 3: Add the SSH Key on GitHub
+
+$ clip < ~/.ssh/id_rsa.pub
